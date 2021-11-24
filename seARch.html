@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
+ <head>
     <title>seARch! Results</title>
   </head>
-  <style>
-  .gsc-tabsArea {
-    display: none;
+<style>
+body {
+font-family: arial, sans-serif !important;
+margin: 0;
+}
+table.gsc-search-box td.gsc-input {
+    width: 153px !IMPORTANT;
+}
+table.gsc-search-box td.gsc-input {
+    padding-left: 110px;
+}
+.gsc-results-wrapper-nooverlay.gsc-results-wrapper-visible {
+padding-bottom: 41px !important;
+}
+.gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 3px solid #dd4b39;
+color: #dd4b39;
+font-weight: bold;
+margin: 2px 0px 0;
+font-size: 13px;
+padding-bottom: 15px;
+width: auto !Important;
 }
 .gsc-refinementsArea {
-    display: none;
+border: none !important;
 }
-.gsc-above-wrapper-area {
-    border-top: 1px solid #e9e9e9;
-    border-bottom: none !important;
-}
-td.gsc-orderby-container {
-    display: none;
-}
-.gsc-above-wrapper-area-container .gsc-result-info-container .gsc-result-info {
-    font-family: verdana,arial,sans-serif;
-    text-align: center !important;
-    width: auto;
-    color: #6F6F6F !important;
-    font-size: 13px;
-}
-table.gsc-table-result {
-    font-family: verdana,arial,sans-serif !important;
-}
-.gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title * {
-    font-size: 16px;
-    font-weight: normal !important;
-}
-.search-logo-1998-classic {
-    width: 375px;
-}
-.search-box-1998-classic {
-    width: 500px;
-}
-td.gsc-clear-button {
-    display: none;
-}
-.gsc-cursor-box {
-    text-align: center;
+.gsc-tabsArea {
+height: 47px !important;
 }
 .gcsc-branding {
-    display: none !important;
+display: none !Important;
 }
+.gsc-tabsArea {
+border-bottom: 1px solid #ebebeb !important;
+}
+.gsc-tabHeader.gsc-inline-block.gsc-tabhInactive {
+color: #777 !important;
+border-top: none;
+border-left: none;
+border-right: none;
+font-weight: normal;
+margin: 2px 0px 0;
+font-size: 13px;
+padding-bottom: 18px;
+width: auto !Important;
+}
+.gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
+min-width: 42px;
+max-width: 100px;
+}
+.gsc-search-button.gsc-search-button-v2 {
+margin-right: 75px !important;
+}
+</style>
 
-  </style>
-  <body>
-    
+
+
 <script>
   (function() {
     var cx = '014946948648141607888:kcekdkszwby';
@@ -62,8 +74,17 @@ td.gsc-clear-button {
     s.parentNode.insertBefore(gcse, s);
   })();
 </script>
-<gcse:searchbox></gcse:searchbox>
-
-<div id="main"><div id="easter-egg"><style>#cnt,#mngb,#searchform,.sfbgx,.gssb_c{display:none}div#easter-egg{font-size:medium;font-family:verdana,arial,sans-serif;background-color:#fff;color:#000}a{color:#00e !important}a:visited{color:#f00 !important}a:active{color:#009 !important}div.nav{margin-top:1ex}div.nav A,span.nav{font-size:8pt;font-family:verdana,arial,sans-serif}div.nav A{color:black}#main{box-sizing:border-box;padding:8px}</style><form><input name="ct" type="hidden" value="google-in-1998"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td valign="top" class="search-logo-1998-classic"><a class="nj" href="index.html"><img src="Search.png" alt="seARch!" border="0" height="78" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)"></a></td><td width="5">&nbsp;</td><td align="left" class="search-box-1998-classic"><gcse:searchbox></gcse:searchbox></td><td align="left" valign="top"></td><td align="right" valign="top"></td></tr></tbody></table></form><gcse:searchresults></gcse:searchresults><hr size="1"><center><br></center><br><center><font size="-1">Copyright © 2021, 22 Squirrel Enterprises and seARch! -&nbsp;<a class="nj" href="about.html">More!</a></font></center></div></div>
+<div class="grey" style="
+background: #f1f1f1;
+border-bottom: 1px solid #ffffff;
+height: 50px;
+margin: 0;
+padding: 9 500 0 9;">
+<a id="cse-logo-target" href="index.html">
+<img id="cse-logo" src="Search.html" height="38" style="
+    margin-bottom: -50px;
+">
+</a><gcse:searchbox></gcse:searchbox></div>
+<gcse:searchresults></gcse:searchresults>
   </body>
 </html>
