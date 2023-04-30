@@ -1,105 +1,81 @@
 <!DOCTYPE html>
 <html>
- <head>
+  <head>
     <title>seARch! Results</title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+      .gsc-results-wrapper-nooverlay.gsc-results-wrapper-visible {
+        padding-bottom: 41px !important;
+      }
+      .gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid #6a0dad;
+        color: #6a0dad;
+        font-weight: bold;
+        margin: 2px 0 0;
+        font-size: 13px;
+        padding-bottom: 15px;
+        width: auto !important;
+      }
+      .gsc-refinementsArea {
+        border: none !important;
+      }
+      .gsc-tabsArea {
+        height: 47px !important;
+        border-bottom: 1px solid #ffffff !important;
+      }
+      .gsc-tabHeader.gsc-inline-block.gsc-tabhInactive {
+        color: #777 !important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-weight: normal;
+        margin: 2px 0 0;
+        font-size: 13px;
+        padding-bottom: 18px;
+        width: auto !important;
+      }
+      .gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
+        min-width: 42px;
+        max-width: 100px;
+      }
+    </style>
+    <script>
+      function displayInFrame() {
+        var searchResults = document.querySelector('.gsc-results-wrapper-overlay');
+        var iframe = document.createElement('iframe');
+        iframe.src = "about:blank";
+        iframe.style = "width:100%;height:500px;border:none;";
+        searchResults.innerHTML = '';
+        searchResults.appendChild(iframe);
+        var doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write('<html><body>' + searchResults.innerHTML + '</body></html>');
+        doc.close();
+      }
+
+      (function() {
+        var cx = '014946948648141607888:kcekdkszwby';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
   </head>
-<style>
-body {
-font-family: arial, sans-serif !important;
-margin: 0;
-}
-table.gsc-search-box td.gsc-input {
-    width: 23px !IMPORTANT;
-}
-table.gsc-search-box td.gsc-input {
-    padding-left: 200px;
-}
-.gsc-results-wrapper-nooverlay.gsc-results-wrapper-visible {
-padding-bottom: 41px !important;
-}
-.gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
-border-top: none;
-border-left: none;
-border-right: none;
-border-bottom: 3px solid #6a0dad;
-color: #6a0dad;
-font-weight: bold;
-margin: 2px 0px 0;
-font-size: 13px;
-padding-bottom: 15px;
-width: auto !Important;
-}
-.gsc-refinementsArea {
-border: none !important;
-}
-.gsc-tabsArea {
-height: 47px !important;
-}
-.gcsc-branding {
-display: none !Important;
-}
-.gsc-tabsArea {
-border-bottom: 1px solid #ffffff !important;
-}
-.gsc-tabHeader.gsc-inline-block.gsc-tabhInactive {
-color: #777 !important;
-border-top: none;
-border-left: none;
-border-right: none;
-font-weight: normal;
-margin: 2px 0px 0;
-font-size: 13px;
-padding-bottom: 18px;
-width: auto !Important;
-}
-.gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
-min-width: 42px;
-max-width: 100px;
-}
-.gsc-search-button.gsc-search-button-v2 {
-margin-right: 75px !important;
-}
-</style>
-
-
-
-<script>
-  function displayInFrame() {
-    var searchResults = document.querySelector('.gsc-results-wrapper-overlay');
-    var iframe = document.createElement('iframe');
-    iframe.src = "about:blank";
-    iframe.style = "width:100%;height:500px;border:none;";
-    searchResults.innerHTML = '';
-    searchResults.appendChild(iframe);
-    var doc = iframe.contentWindow.document;
-    doc.open();
-    doc.write('<html><body>' + searchResults.innerHTML + '</body></html>');
-    doc.close();
-  }
-  
-  (function() {
-    var cx = '014946948648141607888:kcekdkszwby';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<div class="grey" style="
-background: #ffffff;
-border-bottom: 1px solid #ffffff;
-height: 50px;
-margin: 0;
-padding: 9 500 0 9;">
-<a id="cse-logo-target" href="index.html">
-<img id="cse-logo" src="Search.png" height="50" style="
-    margin-bottom: -50px;
-">
-</a><gcse:searchbox></gcse:searchbox></div>
-<gcse:searchresults></gcse:searchresults>
+  <body>
+    <div class="gsc-tabsArea"></div>
+    <div class="gsc-results-wrapper-nooverlay gsc-results-wrapper-visible">
+      <gcse:searchresults></gcse:searchresults>
+    </div>
   </body>
 </html>
