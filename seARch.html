@@ -66,6 +66,19 @@ margin-right: 75px !important;
 
 
 <script>
+  function displayInFrame() {
+    var searchResults = document.querySelector('.gsc-results-wrapper-overlay');
+    var iframe = document.createElement('iframe');
+    iframe.src = "about:blank";
+    iframe.style = "width:100%;height:500px;border:none;";
+    searchResults.innerHTML = '';
+    searchResults.appendChild(iframe);
+    var doc = iframe.contentWindow.document;
+    doc.open();
+    doc.write('<html><body>' + searchResults.innerHTML + '</body></html>');
+    doc.close();
+  }
+  
   (function() {
     var cx = '014946948648141607888:kcekdkszwby';
     var gcse = document.createElement('script');
